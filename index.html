@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h1>Placement Tracker</h1>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h2 id="total-count">0</h2>
+            <p>Applications</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="selected-count">0</h2>
+            <p>Selected</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="rejected-count">0</h2>
+            <p>Rejected</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="interview-count">0</h2>
+            <p>Interview</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="highest-package">0</h2>
+            <p>Highest Package</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="average-package">0</h2>
+            <p>Average Package</p>
+        </div>
+
+    </div>
+
+    <div class="form-container">
+
+        <input
+            type="text"
+            id="company-name"
+            placeholder="Company Name"
+        >
+
+        <input
+            type="text"
+            id="role"
+            placeholder="Role"
+        >
+
+        <input
+            type="date"
+            id="application-date"
+        >
+
+        <input
+            type="number"
+            id="package"
+            placeholder="Package (LPA)"
+        >
+
+        <textarea
+            id="notes"
+            placeholder="Notes about OA, Interview, Preparation etc."
+        ></textarea>
+
+        <select id="status">
+            <option value="Applied">Applied</option>
+            <option value="OA Scheduled">OA Scheduled</option>
+            <option value="OA Cleared">OA Cleared</option>
+            <option value="Interview">Interview</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <button id="add-btn">
+            Add Company
+        </button>
+
+    </div>
+
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Search companies..."
+    >
+
+    <select id="filter-status">
+        <option value="All">All</option>
+        <option value="Applied">Applied</option>
+        <option value="OA Scheduled">OA Scheduled</option>
+        <option value="OA Cleared">OA Cleared</option>
+        <option value="Interview">Interview</option>
+        <option value="Selected">Selected</option>
+        <option value="Rejected">Rejected</option>
+    </select>
+
+    <div class="company-list"></div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

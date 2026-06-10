@@ -1,0 +1,295 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+h1:hover{
+    transform: scale(1.03);
+}
+
+/* =========================
+   Stats Section
+========================= */
+
+.stats-container{
+    max-width: 1100px;
+    margin: 20px auto 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 20px;
+}
+
+.stat-card{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover{
+    transform: translateY(-5px) scale(1.02);
+}
+
+.stat-card h2{
+    color: #4f46e5;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.stat-card p{
+    color: #666;
+    font-weight: 600;
+}
+
+/* =========================
+   Form
+========================= */
+
+.form-container{
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select,
+button,
+textarea{
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+input,
+select,
+textarea{
+    border: 1px solid #dcdcdc;
+    transition: all 0.3s ease;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+    border-color: #4f46e5;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(79,70,229,0.2);
+}
+
+button{
+    border: none;
+    background-color: #4f46e5;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(79,70,229,0.3);
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+/* =========================
+   Search & Filter
+========================= */
+
+#search-input{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 25px auto 15px;
+}
+
+#filter-status{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* =========================
+   Company Cards
+========================= */
+
+.company-list{
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 20px;
+}
+
+.company-card{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.company-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.company-card h3{
+    color: #222;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.company-card p{
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.company-card button{
+    width: 100%;
+}
+
+.edit-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #0ea5e9;
+}
+
+.edit-btn:hover{
+    background: #0284c7;
+}
+
+.delete-btn{
+    background: #ef4444;
+}
+
+.delete-btn:hover{
+    background: #dc2626;
+}
+
+/* =========================
+   Notes Box
+========================= */
+
+.notes-box{
+    margin-top: 12px;
+    padding: 12px;
+    background: #f8fafc;
+    border-left: 4px solid #4f46e5;
+    border-radius: 8px;
+    white-space: pre-wrap;
+}
+
+/* =========================
+   Status Badges
+========================= */
+
+.status-badge{
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Applied{
+    background-color: #6366f1;
+}
+
+.OA-Scheduled{
+    background-color: #f59e0b;
+}
+
+.OA-Cleared{
+    background-color: #0ea5e9;
+}
+
+.Interview{
+    background-color: #8b5cf6;
+}
+
+.Selected{
+    background-color: #22c55e;
+}
+
+.Rejected{
+    background-color: #ef4444;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:768px){
+
+    body{
+        padding: 20px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    input,
+    select,
+    textarea,
+    button{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:480px){
+
+    body{
+        padding: 15px;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    input,
+    select,
+    textarea,
+    button{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .company-list{
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card h2{
+        font-size: 1.5rem;
+    }
+}
